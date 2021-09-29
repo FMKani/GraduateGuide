@@ -1,0 +1,35 @@
+﻿CREATE TABLE Programa
+(
+  an_base integer,
+  cod_municipio character varying(8) NOT NULL,
+  nm_grande_area_conhecimento character varying(100) NOT NULL,
+  nm_area_conhecimento character varying(100) NOT NULL,
+  nm_area_basica CHARACTER (50) NOT NULL,
+  nm_subarea_conhecimento character varying(100),
+  nm_especialidade character varying(100),
+  cd_area_avaliacao smallint,
+  nm_area_avaliacao character varying(100) NOT NULL,
+  sg_entidade_ensino character varying(5) NOT NULL,
+  nm_entidade_ensino character varying(100),
+  in_rede character varying(30),
+  cod_ies integer NOT NULL,
+  cs_status_juridico character varying(30),
+  ds_dependencia_administrativa character varying(30),
+  ds_organizacao_academica character varying(30),
+  nm_regiao character varying(30),
+  sg_uf_programa character varying(5),
+  nm_municipio_programa_ies character varying(100),
+  nm_modalidade_programa character varying(30),
+  cd_programa_ies character varying(30) NOT NULL,
+  nm_programa_ies character varying(100),
+  nm_programa_idioma character varying(30),
+  cd_conceito_programa character varying(1),
+  an_inicio_programa integer,
+  an_inicio_curso integer,
+  ds_situacao_programa character varying(30),
+  dt_situacao_programa character varying(30),
+  
+  CONSTRAINT pk_cd_programa_ies PRIMARY KEY (cd_programa_ies),
+  CONSTRAINT fk_instituicao FOREIGN KEY (cod_ies, cod_municipio)
+      REFERENCES instituicao (cod_ies, cod_municipio)
+)
