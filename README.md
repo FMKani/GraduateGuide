@@ -7,7 +7,7 @@
   <img alt="Project top programing language" src="https://img.shields.io/github/languages/top/FMKani/PosGuide?">
 </p> 
 
-O PostGuide é uma ferramenta desenvolvida para auxiliar estudantes recém formados que estejam a procura de um programa de pós-graduação. A aplicação visa, através de indicadores e filtros, tornar a experiência de busca mais simples e eficiente. Um manual de como a funções devem ser executadas, estão disponiveis na página: [Manual - PosGuide](https://balsam-rambutan-da5.notion.site/Graduate-Guide-User-Wiki-6ee8910492ad4beea536ca2ee13a7d71)
+O PosGuide é uma ferramenta desenvolvida para auxiliar estudantes recém formados que estejam a procura de um programa de pós-graduação. A aplicação visa, através de indicadores e filtros, tornar a experiência de busca mais simples e eficiente. Um manual de como a funções devem ser executadas, estão disponiveis na página: [Manual - PosGuide](https://balsam-rambutan-da5.notion.site/Graduate-Guide-User-Wiki-6ee8910492ad4beea536ca2ee13a7d71)
 
 <p align="left">
  <a href="#bookmark-funções">Funções</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
