@@ -54,7 +54,7 @@ Para rodar a aplicação será necessário:
 * [Git](https://git-scm.com)
 * [Docker](https://www.docker.com/)
 
-Primeiramente clone o repsitório e instale as dependências.
+Primeiramente clone o repositório e instale as dependências.
 <br>
 
 ```
@@ -67,8 +67,6 @@ $ cd PosGuide
 # Em seguida execute 
 $ ./deploy.sh
 ```
-
-
 
 ## :mailbox_with_mail: Contato!
 
