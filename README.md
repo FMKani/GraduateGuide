@@ -1,6 +1,4 @@
-<h2 align="left">
-   PosGuide
-</h2>
+<h2>PosGuide</h2>
 
 <p align="left">
   <img alt="Project programing languages count" src="https://img.shields.io/github/languages/count/FMKani/PosGuide?">
@@ -9,17 +7,17 @@
   <img alt="Project top programing language" src="https://img.shields.io/github/languages/top/FMKani/PosGuide?">
 </p> 
 
+O PostGuide é uma ferramenta desenvolvida para auxiliar estudantes recém formados que estejam a procura de um programa de pós-graduação. A aplicação visa, através de indicadores e filtros, tornar a experiência de busca mais simples e eficiente. 
+
 <p align="left">
-  <a href="#computer-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-desenvolvido-com">Desenvolvido com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#mailbox_with_mail-contato">contato</a>
- </p>
+ <a href="#bookmark-funções">Funções</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#rocket-desenvolvido-com">Desenvolvido com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#information_source-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#blue_book-manual">Manual</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#mailbox_with_mail-contato">Contato</a>
+</p>
 
-
-## :computer: Projeto 
-
-O PostGuide é uma ferramenta desenvolvida para auxiliar estudantes recém formados que estejam a procura de um curso de pós-graduação. A aplicação visa, através de indicadores e filtros, tornar a experiência de busca mais simples e eficiente.
+## :bookmark: Funções
 
 ## :rocket: Desenvolvido com
 
@@ -61,6 +59,10 @@ $ cd PosGuide
 # Em seguida execute 
 $ ./deploy.sh
 ```
+
+## :blue_book: Manual
+
+Um manual de como a funções devem ser executadas, apropriadamente, estão disponiveis na página: [Manual - PosGuide](https://balsam-rambutan-da5.notion.site/Graduate-Guide-User-Wiki-6ee8910492ad4beea536ca2ee13a7d71)
 
 ## :mailbox_with_mail: Contato!
 
