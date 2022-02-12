@@ -1,21 +1,15 @@
-<div align="center">
-    <img src="" width="300px"/>
-</div>
-
-<br />
-
-<h2 align="center">
+<h2 align="left">
    PosGuide
 </h2>
 
-<p align="center">
+<p align="left">
   <img alt="Project programing languages count" src="https://img.shields.io/github/languages/count/FMKani/PosGuide?">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/FMKani/PosGuide?">
   <img alt="Last commit on GitHub" src="https://img.shields.io/github/last-commit/FMKani/PosGuide?">
   <img alt="Project top programing language" src="https://img.shields.io/github/languages/top/FMKani/PosGuide?">
 </p> 
 
-<p align="center">
+<p align="left">
   <a href="#computer-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-desenvolvido-com">Desenvolvido com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
