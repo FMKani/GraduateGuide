@@ -7,14 +7,12 @@
   <img alt="Project top programing language" src="https://img.shields.io/github/languages/top/FMKani/PosGuide?">
 </p> 
 
-O PostGuide é uma ferramenta desenvolvida para auxiliar estudantes recém formados que estejam a procura de um programa de pós-graduação. A aplicação visa, através de indicadores e filtros, tornar a experiência de busca mais simples e eficiente. 
+O PostGuide é uma ferramenta desenvolvida para auxiliar estudantes recém formados que estejam a procura de um programa de pós-graduação. A aplicação visa, através de indicadores e filtros, tornar a experiência de busca mais simples e eficiente. Um manual de como a funções devem ser executadas, estão disponiveis na página: [Manual - PosGuide](https://balsam-rambutan-da5.notion.site/Graduate-Guide-User-Wiki-6ee8910492ad4beea536ca2ee13a7d71)
 
 <p align="left">
  <a href="#bookmark-funções">Funções</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  <a href="#rocket-desenvolvido-com">Desenvolvido com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  <a href="#information_source-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#blue_book-manual">Manual</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#mailbox_with_mail-contato">Contato</a>
 </p>
 
 ## :bookmark: Funções
@@ -59,21 +57,15 @@ $ cd PosGuide
 # Em seguida execute 
 $ ./deploy.sh
 ```
+<br>
 
-## :blue_book: Manual
-
-Um manual de como a funções devem ser executadas, apropriadamente, estão disponiveis na página: [Manual - PosGuide](https://balsam-rambutan-da5.notion.site/Graduate-Guide-User-Wiki-6ee8910492ad4beea536ca2ee13a7d71)
-
-## :mailbox_with_mail: Contato!
-
-
+___
+<p align="center">Made with :coffee: and ❤️ by Wanielton Ferreira.</p>
+<p align="center">
 <a href="https://www.linkedin.com/in/wanielton-ferreira" target="_blank" >
   <img alt="Linkedin - Wanielton Ferreira" src="https://img.shields.io/badge/Linkedin--%23F8952D?style=social&logo=linkedin">
 </a>
-<a href="mailto:wanieltonferreira@gmail.com" target="_blank" >
-  <img alt="Email - Wanielton Ferreira" src="https://img.shields.io/badge/Email--%23F8952D?style=social&logo=gmail">
-</a> 
-
----
-
-Made with :coffee: and ❤️ by Wanielton Ferreira.
+  <a href="mailto:wanieltonferreira@gmail.com" target="_blank" >
+    <img alt="Email - Wanielton Ferreira" src="https://img.shields.io/badge/Email--%23F8952D?style=social&logo=gmail">
+  </a> 
+</p>
