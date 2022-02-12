@@ -12,8 +12,9 @@ O PosGuide é uma ferramenta desenvolvida para auxiliar estudantes recém formad
 <p align="left">
  <a href="#bookmark-funções">Funções</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  <a href="#rocket-desenvolvido-com">Desenvolvido com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
- <a href="#information_source-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#information_source-como-executar">Como executar</a>
 </p>
+<br>
 
 ## :bookmark: Funções
 
