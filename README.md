@@ -57,6 +57,9 @@ $ cd PosGuide
 
 # Em seguida execute 
 $ ./deploy.sh
+
+# Ou 
+$ sudo ./deploy.sh
 ```
 <br>
 
@@ -70,3 +73,4 @@ ___
     <img alt="Email - Wanielton Ferreira" src="https://img.shields.io/badge/Email--%23F8952D?style=social&logo=gmail">
   </a> 
 </p>
+

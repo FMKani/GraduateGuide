@@ -1,0 +1,165 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// enum RedeIES {
+//   PUBLICA  @map("Pública")
+//   PRIVADA  @map("Privada")
+
+// }
+
+// enum AdminIES {
+//   FEDERAL    @map("Federal")
+//   ESTADUAL   @map("Estadual")
+//   PRIVADA    @map("Privada")
+//   MUNICIPAL  @map("Municipal")
+// }
+
+// enum LocalCoordenada {
+//   INSTITUICAO
+//   MUNICIPIO
+// }
+
+model Ies {
+  id                   String  @id @default(uuid()) @db.Uuid
+  cod_ies              String?
+  cod_municipio        String?
+  nome_ies             String?
+  sigla_ies            String?
+  municipio            String?
+  regiao               String?
+  estado               String?
+  sigla_estado         String?
+  organizacao          String?
+  rede                 String?
+  administracao        String?
+  endereco             String?
+  numero_endereco      String?
+  complemento_endereco String?
+  bairro               String?
+  cep                  String?
+  telefones            String?
+  emails               String?
+  site                 String?
+  latitude             String?
+  longitude            String?
+  local_coordenada     String?
+
+  programas Programa[]
+
+  @@unique([cod_ies, cod_municipio])
+  @@index([nome_ies, municipio, regiao, estado, rede, administracao])
+  @@map("ies")
+}
+
+model Programa {
+  id                            String  @id @default(uuid()) @db.Uuid
+  iesId                         String? @map("ies_id") @db.Uuid
+  an_base                       String?
+  nm_grande_area_conhecimento   String?
+  nm_area_conhecimento          String?
+  nm_area_basica                String?
+  nm_subarea_conhecimento       String?
+  nm_especialidade              String?
+  cd_area_avaliacao             String?
+  nm_area_avaliacao             String?
+  sg_entidade_ensino            String?
+  nm_entidade_ensino            String?
+  in_rede                       String?
+  sg_entidade_ensino_rede       String?
+  cs_status_juridico            String?
+  ds_dependencia_administrativa String?
+  ds_organizacao_academica      String?
+  nm_regiao                     String?
+  sg_uf_programa                String?
+  nm_municipio_programa_ies     String?
+  nm_modalidade_programa        String?
+  cd_programa_ies               String?
+  nm_programa_ies               String?
+  nm_programa_idioma            String?
+  cd_conceito_programa          Int?
+  an_inicio_programa            String?
+  an_inicio_curso               String?
+  ds_situacao_programa          String?
+  dt_situacao_programa          String?
+  id_add_foto_programa_ies      String?
+  id_add_foto_programa          String?
+
+  ies       Ies?       @relation(fields: [iesId], references: [id])
+  bolsas    Bolsa[]
+  producoes Producao[]
+
+  @@unique([cd_programa_ies])
+  @@index([nm_area_basica, nm_entidade_ensino, cd_programa_ies, nm_programa_ies])
+  @@map("programas")
+}
+
+model Bolsa {
+  id                     String  @id @default(uuid()) @db.Uuid
+  programaId             String? @map("programa_id") @db.Uuid
+  an_referencia          String?
+  nm_municipio_ies_capes String?
+  sg_uf_ies_capes        String?
+  nm_regiao_ies_capes    String?
+  cd_ies_capes           String?
+  nm_ies_capes           String?
+  sg_ies_capes           String?
+  nm_natureza_juridica   String?
+  sg_programa_fomento    String?
+  cd_programa            String?
+  nm_programa            String?
+  nm_grande_area         String?
+  nm_area_avaliacao      String?
+  nm_area_conhecimento   String?
+  nm_nivel_padrao        String?
+  qt_bolsas_concedidas   Int?
+
+  programa Programa? @relation(fields: [programaId], references: [id])
+
+  @@unique([an_referencia, cd_programa, sg_ies_capes])
+  @@map("bolsas")
+}
+
+model Producao {
+  id                          String  @id @default(uuid()) @db.Uuid
+  programaId                  String? @map("programa_id") @db.Uuid
+  cd_programa_ies             String?
+  nm_programa_ies             String?
+  sg_entidade_ensino          String?
+  nm_entidade_ensino          String?
+  an_base                     String?
+  id_add_producao_intelectual String?
+  id_producao_intelectual     String?
+  nm_producao                 String?
+  id_tipo_producao            String?
+  nm_tipo_producao            String?
+  id_subtipo_producao         String?
+  nm_subtipo_producao         String?
+  id_formulario_producao      String?
+  nm_formulario               String?
+  id_area_concentracao        String?
+  nm_area_concentracao        String?
+  id_linha_pesquisa           String?
+  nm_linha_pesquisa           String?
+  id_projeto                  String?
+  nm_projeto                  String?
+  dh_inicio_area_conc         String?
+  dh_fim_area_conc            String?
+  dh_inicio_linha             String?
+  dh_fim_linha                String?
+  in_glosa                    String?
+
+  programa Programa? @relation(fields: [programaId], references: [id])
+
+  @@unique([id_producao_intelectual])
+  @@index([cd_programa_ies, nm_area_concentracao, nm_projeto])
+  @@map("producoes")
+}

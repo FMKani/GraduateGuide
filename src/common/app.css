@@ -1,0 +1,17 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply text-neutral-800;
+  }
+}
+
+div.ol-zoom,
+div.ol-rotate,
+div.ol-attribution {
+  @apply hidden;
+}
+
+@tailwind components;
+
+@tailwind utilities;
