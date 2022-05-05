@@ -41,7 +41,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ### Requirements
 
-Para rodar a aplicação será necessário:
+Para executar a aplicação será necessário:
 * [Git](https://git-scm.com)
 * [Docker](https://www.docker.com/)
 
