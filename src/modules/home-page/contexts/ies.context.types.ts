@@ -6,6 +6,7 @@ interface IESContextHelpers {
   setIES(v: Ies): void;
   courseDispatch(v: Partial<CourseReducerState>): void;
   productionsDispatch(v: Partial<ProductionsReducerState>): void;
+  setCounter(n: number): void;
   setComparing(
     c: {
       course: Course;
@@ -19,6 +20,7 @@ interface IESContextValue {
   productions: ProductionsReducerState;
   IESs: Ies[];
   IES: Ies;
+  counter: number;
   comparing: {
     course: Course;
     ies: Ies;

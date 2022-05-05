@@ -35,6 +35,8 @@ export const IESProvider: React.FC = (props) => {
     { course: Course; ies: Ies }[]
   >([]);
 
+  const [counter, setCounter] = React.useState<number>();
+
   const [courseState, courseDispatch] = React.useReducer(courseReducer, {
     filters: {
       rateRange: [0, 7],
@@ -53,13 +55,21 @@ export const IESProvider: React.FC = (props) => {
       {
         IES,
         IESs,
+        counter,
         course: courseState,
         productions: productionsState,
         comparing
       },
-      { setIES, setIESs, courseDispatch, setComparing, productionsDispatch }
+      {
+        setIES,
+        setIESs,
+        courseDispatch,
+        setComparing,
+        productionsDispatch,
+        setCounter
+      }
     ],
-    [IES, IESs, courseState, comparing, productionsState]
+    [IES, IESs, courseState, comparing, productionsState, counter, setCounter]
   );
 
   return (

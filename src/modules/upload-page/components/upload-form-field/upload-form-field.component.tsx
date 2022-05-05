@@ -1,5 +1,5 @@
 import * as React from "react";
-import { UploadFormValues } from "../upload-form-form.hook";
+import { UploadFormValues } from "../upload-form/upload-form.hook";
 import { useFormikContext } from "formik";
 
 export interface UploadFormFieldProps {

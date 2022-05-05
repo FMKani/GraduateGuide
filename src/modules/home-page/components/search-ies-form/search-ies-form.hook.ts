@@ -73,7 +73,9 @@ const courseOrderByOptions = [
 ];
 
 export function useSearchIesForm() {
-  const [_, { setIESs, courseDispatch, productionsDispatch }] = useIES(); // eslint-disable-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_, { setIESs, courseDispatch, productionsDispatch, setCounter }] =
+    useIES();
 
   const searcheablePaginate = React.useCallback(
     (collection: Option[], search: string, page = 0) => {
@@ -320,11 +322,14 @@ export function useSearchIesForm() {
 
       fetch(`${endpoint}?${params}`)
         .then((response) => response.json())
-        .then(({ data }) => setIESs(data))
+        .then(({ data, count, courseCount }) => {
+          setIESs(data);
+          setCounter(courseCount ?? count ?? data.length);
+        })
         .catch(console.error)
         .finally(() => actions.setSubmitting(false));
     },
-    [setIESs, courseDispatch, productionsDispatch]
+    [setIESs, setCounter, courseDispatch, productionsDispatch]
   );
 
   return {

@@ -6,7 +6,7 @@ import { Option } from "@modules/home-page/components/search-ies-form/search-ies
 import CourseCompare from "@modules/home-page/components/course-compare";
 import CourseDetails from "@modules/home-page/components/course-details";
 import IesDetails from "@modules/home-page/components/ies-details";
-import IesCounter from "@modules/home-page/components/ies-counter";
+import Counter from "@modules/home-page/components/counter";
 import dynamic from "next/dynamic";
 
 const SearchIESForm = dynamic(
@@ -33,7 +33,7 @@ const HomePage: React.VFC<HomePageProps> = (props) => {
 
         <section className="flex-1 relative [background-color:#aad3df]">
           <span className="absolute left-0 right-0 bottom-0 top-0 z-10 pointer-events-none">
-            <IesCounter />
+            <Counter />
             <CourseCompare />
             <CourseDetails />
             <IesDetails />

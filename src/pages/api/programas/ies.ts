@@ -12,63 +12,40 @@ const get: NextApiHandler = async (request, response) => {
     has_bolsas
   } = request.query;
 
-  const where: any = {
-    programas: {
-      some: {
-        AND: {
-          cd_conceito_programa: { lte: +max_rate || 7 }
-        },
-        cd_conceito_programa: { gte: +min_rate || 0 },
-        nm_area_basica: {
-          mode: "insensitive",
-          startsWith: course_category?.toString()
-        },
-        nm_modalidade_programa: {
-          mode: "insensitive",
-          equals: course_type?.toString()
-        },
-        ...(has_bolsas === "true"
-          ? {
-              bolsas: {
-                some: { NOT: { id: undefined } }
-              }
-            }
-          : {})
-      }
-    }
-  };
+  const programasWhere = {
+    cd_conceito_programa: { gte: +min_rate || 0, lte: +max_rate || 7 },
+
+    nm_area_basica: course_category?.toString(),
+
+    nm_modalidade_programa: course_type?.toLocaleString(),
+
+    ...(has_bolsas === "true" ? { bolsas: { some: {} } } : {})
+  } as any;
 
   const count = await prisma.ies.count({
-    where
+    where: { programas: { every: {}, some: programasWhere } }
   });
 
   const iess = await prisma.ies.findMany({
     ...(+limit ? { take: +limit } : {}),
     ...(+limit * +page ? { skip: +limit * +page } : {}),
-    // distinct: "id",
 
-    // include: { _count: { select: { programas: true } } },
-
-    where: {
+    include: {
       programas: {
-        every: {},
-
-        some: {
-          cd_conceito_programa: { gte: +min_rate || 0, lte: +max_rate || 7 },
-
-          nm_area_basica: course_category?.toString(),
-
-          nm_modalidade_programa: course_type?.toLocaleString(),
-
-          ...(has_bolsas === "true" ? { bolsas: { some: {} } } : {})
-        }
+        where: programasWhere
       }
-    }
+    },
+
+    where: { programas: { every: {}, some: programasWhere } }
   });
 
   response.json({
     data: iess,
     count: count,
+    courseCount: iess.reduce(
+      (a, { programas }) => a + programas?.length ?? 0,
+      0
+    ),
     page: iess.length === +limit ? +page + 1 : undefined
   });
 };
