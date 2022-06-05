@@ -21,7 +21,7 @@ async function setup() {
     fs.appendFileSync(stderr, data)
   );
 
-  await wait({ resources: ["http://localhost:3000"] });
+  await wait({ resources: ["http://localhost:3000/upload"] });
   console.log("[Done] Global setup");
 }
 
