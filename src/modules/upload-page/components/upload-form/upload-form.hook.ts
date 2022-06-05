@@ -95,7 +95,7 @@ export function useUploadForm() {
       }
 
       if (!hasError) {
-        router.push("/upload");
+        router.push("/");
       }
 
       actions.setSubmitting(false);
